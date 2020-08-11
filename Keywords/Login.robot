@@ -6,14 +6,32 @@ Library  Collections
 Library  OperatingSystem
 
 *** Keywords ***
-Set Browser and Size
-	Open Browser  url=https://www.justfab.com  browser=chrome
-	Maximize Browser Window
 
-Closing Browser
-	Close Browser
-	Log  					I did it!!!
+Get Unique Number
+	${timestamp} = 				Get Time  number
+	${timestamp} = 				Convert Date  ${timestamp}  epoch
+	${timestamp} = 				Set Global Variable  ${timestamp}
 
-Close Popup
-	Sleep 					3
-	Reload Page	
+Create Unique Login
+	Get Unique Number
+	${email to enter} =			Set Global Variable  ${email to enter}  dc${timestamp}@test.com
+
+Sign In On Homepage VIP
+	Wait Until Element Is Visible		${homepage signin}
+	Click Element				${homepage signin}
+	Wait Until Element Is Visible		${login email field}
+	Input Text				${login email field}  ${VIP email}
+	Input Text				${login password field}  ${VIP password}
+	Click Element				${login CTA}
+
+Logged Out PDP Choose Size and ATB CTA
+	Wait Until Element Is Visible  		${size selectors}
+	Click Element				${size 9}
+	Click Element				${Logged Out ATB}
+
+Fill Out Speedy Signup Form
+	Wait Until Element Is Visible		${speedy signup email field}
+	Create Unique Login
+	Input Text  				${speedy signup email field}  ${email to enter}	
+	Input Text  				${speedy signup password field}  ${password to enter}
+       	Click Button  				${continue CTA}

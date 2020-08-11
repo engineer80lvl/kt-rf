@@ -1,5 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
+*** Settings ***
+Library  SeleniumLibrary
 Library  DateTime
 Library  String
 Library  Collections
@@ -7,31 +9,9 @@ Library  OperatingSystem
 
 *** Keywords ***
 
-Get Unique Number
-	${timestamp} = 				Get Time  number
-	${timestamp} = 				Convert Date  ${timestamp}  epoch
-	${timestamp} = 				Set Global Variable  ${timestamp}
+Verify Product Name and Review Count on PDP
+	Wait Until Element Is Visible		${product details locator}
+	Page Should Contain			${product name text}
+	${pdp product review count}=		Get Text  ${pdp product review count locator}
+	Should Be Equal				${product review count}  ${pdp product review count}
 
-Create Unique Login
-	Get Unique Number
-	${email to enter} =			Set Global Variable  ${email to enter}  dc${timestamp}@test.com
-
-Sign In On Homepage VIP
-	Wait Until Element Is Visible		${homepage signin}
-	Click Element				${homepage signin}
-	Wait Until Element Is Visible		${login email field}
-	Input Text				${login email field}  ${VIP email}
-	Input Text				${login password field}  ${VIP password}
-	Click Element				${login CTA}
-
-Logged Out PDP Choose Size and ATB CTA
-	Wait Until Element Is Visible  		${size selectors}
-	Click Element				${size 9}
-	Click Element				${Logged Out ATB}
-
-Fill Out Speedy Signup Form
-	Wait Until Element Is Visible		${speedy signup email field}
-	Create Unique Login
-	Input Text  				${speedy signup email field}  ${email to enter}	
-	Input Text  				${speedy signup password field}  ${password to enter}
-       	Click Button  				${continue CTA}
