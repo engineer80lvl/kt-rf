@@ -25,4 +25,12 @@ Choose random element from list
     @{fulllist}=  Get Web Elements             ${locator}
     ${random} =  Evaluate  random.choice($fulllist)  random
     Click Element                              ${random}
-     
+ 
+Choose random element from list and get text
+    [Arguments]                                ${locator}
+    Wait Until Element Is Visible              ${locator}
+    @{fulllist}=  Get Web Elements             ${locator}
+    ${random} =  Evaluate  random.choice($fulllist)  random
+    ${randomtext}=  Get Text                   ${random}
+    Set Global Variable                        ${randomtext}
+    Click Element                              ${random}

@@ -21,6 +21,7 @@ Suite Teardown    Closing Browser
 *** Test Cases ***
 Start of VIP Test Cases
     [Tags]  VIP
+    
 	Log					VIP Test Cases
 
 
@@ -31,13 +32,14 @@ Scenario 1 Verify Customer Name
 	Sign In On Homepage VIP
 	Close Popup
 	Get User Name From Homepage
-	Run Keyword If				${greeting length} > 0  Name Displayed  ELSE  Name NOT Displayed
+	Run Keyword If				        ${greeting length} > 0  Name Displayed  ELSE  Name NOT Displayed
 
 
 Scenario 2 Navigate to product grid and verify amount of products displayed	
+	[Documentation]  Need to exclude New Arrivals and Collections since they dont have grid counts
 	[Tags]  VIP
-	Wait Until Element Is Visible		${top nav clothing}
-	Click Element				        ${top nav clothing}
+	
+	Choose random element from list     ${main navigation}
 	Close Popup
 	Pull Grid Counts
 	Run Keyword If				        ${grid count number} == ${number of items in grid value}  Grid Count Success  ELSE  Grid Count Failure
@@ -49,11 +51,13 @@ Scenario 3 Grab all product prices and log them
 	Log All Product Names and Prices
 	
 
-Scenario 7 & & Verify Product Name and Review Count from Grid to PDP
+Scenario 7 Verify Product Name from Grid to PDP
 	[Tags]  VIP
-	Pull Product Name and Review Count From Grid
-	Click Element				        ${grid details block}
-	Verify Product Name and Review Count on PDP
+    
+    Pull Random Product Name From Grid	
+    Verify Product Name on PDP
+
+#Scenario 8 Verify Review Count from Grid to PDP
 
 #Scenario 4 Verify Shipping Terms Using Regex
 

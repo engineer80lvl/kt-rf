@@ -62,11 +62,17 @@ Log All Product Names and Prices
 	${list length}=					Get Length  ${full list}
 	${list length}=					Evaluate  ${grid count number}*2
 
-Pull Product Name and Review Count From Grid
+Pull Random Product Name From Grid
 	#Currently using the first item in the grid, expand to use a random item
-	${product name text}=			Get Text  ${grid product name}
-	${product review count}=		Get Text  ${grid product review count}
-	${product review count}=		Remove String  ${product review count}  (
-	${product review count}=		Remove String  ${product review count}  )
-	Set Global Variable			${product review count}
-	Set Global Variable			${product name text}
+    Choose random element from list and get text  ${grid product name}
+  
+
+
+#Old Code
+#	${product name text}=			Get Text  ${grid product name}
+#	${product review count}=		Get Text  ${grid product review count}
+#	${product review count}=		Remove String  ${product review count}  (
+#	${product review count}=		Remove String  ${product review count}  )
+#	Set Global Variable			${product review count}
+#	Set Global Variable			${product name text}
+	

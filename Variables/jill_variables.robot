@@ -87,6 +87,7 @@ ${list length}					    ${0}
 @{fulllist}
 ${locator}
 ${random}
+${randomtext}
 
 
 
