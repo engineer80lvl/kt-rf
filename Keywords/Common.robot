@@ -7,7 +7,7 @@ Library  OperatingSystem
 
 *** Keywords ***
 Set Browser and Size
-	Open Browser  url=https://www.justfab.com  browser=chrome
+	Open Browser  url=https://www.justfab.com?hideCaptchaAutomation=1  browser=chrome
 	Maximize Browser Window
 
 Closing Browser

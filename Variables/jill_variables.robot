@@ -3,7 +3,7 @@ Library  SeleniumLibrary
 
 *** Variables ***
 #VIP Login Information
-${VIP email}					JFP1@email.com
+${VIP email}					JFP1@email.com 
 ${VIP password}					test12
 
 #Create Lead User
@@ -12,7 +12,7 @@ ${password to enter}				test12
 ${timestamp}					${0}
 
 #Direct URLs
-${logged out PDP url}				https://www.justfab.com/products/Mika-Embellished-Clear-Pump-PP1939068-1810?psrc=search_results
+${logged out PDP url}				https://www.justfab.com/products/Mika-Embellished-Clear-Pump-PP1939068-1810?psrc=search_results?hideCaptchaAutomation=1
 ${my account url}				https://www.justfab.com/account#index.cfm?action=accountinfo.edit_member&tab=profile
 ${direct log out}				https://www.justfab.com/index.cfm?action=member.logout
 
