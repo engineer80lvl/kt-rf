@@ -36,31 +36,31 @@ Scroll To Footer
 
 Pull Grid Counts
 	Wait Until Element Is Visible		${grid count locator}
-	${grid count text}=			Get Text  ${grid count locator}
-	${grid count text}=			Fetch From Left  ${grid count text}  ${SPACE}
-	${grid count number}=  			Convert to Number  ${grid count text}
+	${grid count text}=			        Get Text  ${grid count locator}
+	${grid count text}=		        	Fetch From Left  ${grid count text}  ${SPACE}
+	${grid count number}=  	       		Convert to Number  ${grid count text}
 	${number of items in grid value}=	Get Value  ${number of items in grid}
-	Set Global Variable			${grid count number}
-	Set Global Variable			${number of items in grid value}
+	Set Global Variable		        	${grid count number}
+	Set Global Variable	        		${number of items in grid value}
 
 Log All Product Names and Prices
-	${grid list product names}=    			Get Webelements  ${grid product name}
-	${grid list product prices}=			Get Webelements  ${grid product price}
-	@{full list}=					Create List
+	${grid list product names}=    		Get Webelements  ${grid product name}
+	${grid list product prices}=		Get Webelements  ${grid product price}
+	@{full list}=				    	Create List
         FOR  ${element}  IN  @{grid list product names}
 		${product name text}=			Get Text  ${element}
-		Append To List				${full list}	${product name text}
+		Append To List				    ${full list}	${product name text}
 	END
-	Log						${full list}
+	Log				            		${full list}
 
 	FOR  ${element}  IN  @{grid list product prices}
 		${product price text}=			Get Text  ${element}
-		Insert Into List			${full list}  ${i}  ${product price text}
-		${i}=					Evaluate  ${i}+2
+		Insert Into List		    	${full list}  ${i}  ${product price text}
+		${i}=				        	Evaluate  ${i}+2
 	END
-	Log						${full list}
-	${list length}=					Get Length  ${full list}
-	${list length}=					Evaluate  ${grid count number}*2
+	Log					            	${full list}
+	${list length}=			    		Get Length  ${full list}
+	${list length}=				    	Evaluate  ${grid count number}*2
 
 Pull Random Product Name From Grid
 	#Currently using the first item in the grid, expand to use a random item
