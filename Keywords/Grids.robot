@@ -4,6 +4,7 @@ Library  DateTime
 Library  String
 Library  Collections
 Library  OperatingSystem
+Library  FakerLibrary
 
 *** Keywords ***
 
@@ -69,4 +70,3 @@ Pull Product Name and Review Count From Grid
 	${product review count}=		Remove String  ${product review count}  )
 	Set Global Variable			${product review count}
 	Set Global Variable			${product name text}
-

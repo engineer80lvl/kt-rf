@@ -6,6 +6,7 @@ Library  DateTime
 Library  String
 Library  Collections
 Library  OperatingSystem
+Library  FakerLibrary
 
 *** Keywords ***
 
@@ -15,3 +16,5 @@ Verify Product Name and Review Count on PDP
 	${pdp product review count}=		Get Text  ${pdp product review count locator}
 	Should Be Equal				${product review count}  ${pdp product review count}
 
+Logged Out PDP Click ATB CTA
+	Click Element				${Logged Out ATB}    

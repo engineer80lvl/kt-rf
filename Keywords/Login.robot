@@ -4,6 +4,7 @@ Library  DateTime
 Library  String
 Library  Collections
 Library  OperatingSystem
+Library  FakerLibrary
 
 *** Keywords ***
 
@@ -23,11 +24,6 @@ Sign In On Homepage VIP
 	Input Text				${login email field}  ${VIP email}
 	Input Text				${login password field}  ${VIP password}
 	Click Element				${login CTA}
-
-Logged Out PDP Choose Size and ATB CTA
-	Wait Until Element Is Visible  		${size selectors}
-	Click Element				${size 9}
-	Click Element				${Logged Out ATB}
 
 Fill Out Speedy Signup Form
 	Wait Until Element Is Visible		${speedy signup email field}

@@ -4,6 +4,7 @@ Library  DateTime
 Library  String
 Library  Collections
 Library  OperatingSystem
+Library  FakerLibrary
 
 *** Keywords ***
 Set Browser and Size
@@ -17,3 +18,11 @@ Closing Browser
 Close Popup
 	Sleep 					3
 	Reload Page	
+ 
+Choose random element from list
+    [Arguments]                                ${locator}
+    Wait Until Element Is Visible              ${locator}
+    @{fulllist}=  Get Web Elements             ${locator}
+    ${random} =  Evaluate  random.choice($fulllist)  random
+    Click Element                              ${random}
+     
