@@ -25,3 +25,6 @@ ${ACCOUNT}            xpath://*[@class="action-account"]
 ${ACCOUNT DETAILS}    xpath://*[@class="account_details_item"]
 #//*[@id="header-wrap"]/div/div/div[2]/ul/li[2]/a 
 #${VIP}                //*[@id="header-wrap"]/div/div/div[2]/ul/li[2]/ul/li[5]/a 
+
+#Navigation
+${SHOES}             //*[@id="x_main_navigation"]/li[5]/a
