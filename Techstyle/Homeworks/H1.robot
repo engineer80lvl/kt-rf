@@ -15,11 +15,16 @@ Test case validation LOGIN- VIP
     Open Browser    ${LOGIN URL}   browser=chrome
     Maximize Browser Window
     #sleep 3
+    
+   Wait Until Element Is Visible  ${LOGIN URL}
    Click Element     ${SignInLink}
+   Wait Until Element Is Visible   ${email textbox}
    Input Text    ${email textbox}   ${username}
+   Wait Until Element Is Visible  ${password textbox}
    Input Text    ${password textbox}   ${password}
    Click Button    ${login button} 
    Log  Success!
+   
 
 
 
