@@ -20,15 +20,13 @@ Suite Teardown    Closing Browser
 
 *** Test Cases ***
 Start of VIP Test Cases
-    [Tags]  VIP
-    
-	Log					VIP Test Cases
+    [Tags]                              VIP
+	Log					                VIP Test Cases
 
 
 Scenario 1 Verify Customer Name
-	[Documentation]  To test with a missing name use account - JFNONAME@test.com
-	[Tags]  VIP
-	
+	[Documentation]                     To test with a missing name use account - JFNONAME@test.com
+	[Tags]                              VIP
 	Sign In On Homepage VIP
 	Close Popup
 	Get User Name From Homepage
@@ -36,8 +34,8 @@ Scenario 1 Verify Customer Name
 
 
 Scenario 2 Navigate to product grid and verify amount of products displayed	
-	[Documentation]  Need to exclude New Arrivals and Collections since they dont have grid counts
-	[Tags]  VIP
+	[Documentation]                     Need to exclude New Arrivals and Collections since they dont have grid counts
+	[Tags]                              VIP
 	
 	Choose random element from list     ${main navigation}
 	Close Popup
@@ -46,14 +44,13 @@ Scenario 2 Navigate to product grid and verify amount of products displayed
 	
 
 Scenario 3 Grab all product prices and log them
-	[Tags]  VIP
+	[Tags]                              VIP
 	Scroll To Footer
 	Log All Product Names and Prices
 	
 
 Scenario 7 Verify Product Name from Grid to PDP
-	[Tags]  VIP
-    
+	[Tags]                              VIP
     Pull Random Product Name From Grid	
     Verify Product Name on PDP
 
@@ -62,17 +59,19 @@ Scenario 7 Verify Product Name from Grid to PDP
 #Scenario 4 Verify Shipping Terms Using Regex
 
 
-#Scenario 6 Loyalty Points Check
-#	#Need to change to get the actual values from the dropdown
-#	Go To					${my account url}
-#	Wait Until Element Is Visible		${my account loyalty pts locator}
-#	${my account loyalty points}=		Get Text  ${my account loyalty pts locator}
-#	Click Link				partial link:${my account loyalty points}
-#	Location Should Be			https://www.justfab.com/account#index.cfm?action=accountinfo.rewards&tab=fashion-fund
+Scenario 6 Loyalty Points Check
+    [Tags]                                  VIP
+    Navigate to Boutique
+    Get Boutique Reward Points
+    Find Reward Points Showing In My Account Dropdown
+    Compare Values                          ${boutique points}  ${points in dropdown}
+    Navigate to My Account
+    Get My Account Reward Points
+    Compare Values                          ${my account loyalty points}  ${points in dropdown}
 
 
 End of VIP Test Cases
-	[Tags]  VIP
+	[Tags]                                  VIP
 	Log Out of Account
 	Log					                    End of VIP Test Cases
 

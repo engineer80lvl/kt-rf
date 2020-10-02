@@ -14,6 +14,7 @@ ${timestamp}					    ${0}
 #Direct URLs
 ${my account url}				    https://www.justfab.com/account#index.cfm?action=accountinfo.edit_member&tab=profile
 ${direct log out}				    https://www.justfab.com/index.cfm?action=member.logout
+${boutique url}                     https://www.justfab.com/home
 
 #RV Page Locators
 ${homepage signin}				    xpath://*[@data-autotag="login_modal_singin"]
@@ -48,9 +49,11 @@ ${my account email locator}			xpath://*[@id="span_change_email_address_current_e
 ${my account size locator}			xpath://*[@value="shoe-size-column"]
 ${my account loyalty pts locator}	xpath://*[@class="inline"]
 ${my account locator}				xpath://*[@class="fontello icon-user-2"]
+${points in dropdown locator}       xpath://*[@data-ga-label="rewards-main"]
 
 ${my account loyalty points}
 ${my account email}
+${points in dropdown}
 
 #Grid Locators and Values
 ${grid count locator}				xpath://*[@class="results-count"]
@@ -76,9 +79,11 @@ ${number of items in grid value}	${0}
 
 #My Boutique Page Locators and Values
 ${user greeting}				    xpath://*[@id="greeting"]
+${boutique points locator}          xpath://*[@class="reward_points"]
 
 ${user name}				
-${greeting length}				    ${0}	
+${greeting length}				    ${0}
+${boutique points}
 
 
 #Other Variables
@@ -88,6 +93,7 @@ ${list length}					    ${0}
 ${locator}
 ${random}
 ${randomtext}
+${pnt length}                       ${0}
 
 
 
