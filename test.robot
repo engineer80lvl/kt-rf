@@ -1,4 +1,4 @@
 *** Test Case ***
 
 Test 
-	Log  1
+	Log  Push test
