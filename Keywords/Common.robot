@@ -1,11 +1,3 @@
-*** Settings ***
-Library  SeleniumLibrary
-Library  DateTime
-Library  String
-Library  Collections
-Library  OperatingSystem
-Library  FakerLibrary
-
 *** Keywords ***
 Set Browser and Size
 	Open Browser  url=https://www.justfab.com?hideCaptchaAutomation=1  browser=chrome

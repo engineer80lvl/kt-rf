@@ -1,11 +1,3 @@
-*** Settings ***
-Library  SeleniumLibrary
-Library  DateTime
-Library  String
-Library  Collections
-Library  OperatingSystem
-Library  FakerLibrary
-
 *** Keywords ***
 
 Grid Count Success

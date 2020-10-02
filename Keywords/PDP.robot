@@ -1,13 +1,3 @@
-*** Settings ***
-Library  SeleniumLibrary
-*** Settings ***
-Library  SeleniumLibrary
-Library  DateTime
-Library  String
-Library  Collections
-Library  OperatingSystem
-Library  FakerLibrary
-
 *** Keywords ***
 
 Verify Product Name and Review Count on PDP
