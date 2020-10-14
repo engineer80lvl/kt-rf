@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.1 on win32)" generated="20201009 11:55:36.758" rpa="false">
+<suite id="s1" name="Robot Project" source="C:\Users\madankumar.ponnusamy\Desktop\Java Training\Robot Project">
+<suite id="s1-s1" name="Assigment" source="C:\Users\madankumar.ponnusamy\Desktop\Java Training\Robot Project\Assigment">
+<suite id="s1-s1-s1" name="Signup" source="C:\Users\madankumar.ponnusamy\Desktop\Java Training\Robot Project\Assigment\signup.robot">
+<test id="s1-s1-s1-t1" name="Signup Test">
+<kw name="Open UK Browser" library="setup" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://www.justfab.co.uk/?hideCaptchaAutomation=1</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201009 11:55:37.226" level="INFO">Opening browser 'chrome' to base url 'https://www.justfab.co.uk/?hideCaptchaAutomation=1'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201009 11:55:43.358" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201009 11:55:43.062" endtime="20201009 11:55:43.359"></status>
+</kw>
+<msg timestamp="20201009 11:55:43.485" level="FAIL">WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=85.0.4183.121)
+</msg>
+<status status="FAIL" starttime="20201009 11:55:37.225" endtime="20201009 11:55:43.486"></status>
+</kw>
+<status status="FAIL" starttime="20201009 11:55:37.225" endtime="20201009 11:55:43.486"></status>
+</kw>
+<status status="FAIL" starttime="20201009 11:55:37.224" endtime="20201009 11:55:43.487" critical="yes">Setup failed:
+WebDriverException: Message: unknown error: net::ERR_INTERNET_DISCONNECTED
+  (Session info: chrome=85.0.4183.121)
+</status>
+</test>
+<status status="FAIL" starttime="20201009 11:55:36.873" endtime="20201009 11:55:43.489"></status>
+</suite>
+<status status="FAIL" starttime="20201009 11:55:36.867" endtime="20201009 11:55:43.494"></status>
+</suite>
+<status status="FAIL" starttime="20201009 11:55:36.835" endtime="20201009 11:55:43.498"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Robot Project">Robot Project</stat>
+<stat pass="0" fail="1" id="s1-s1" name="Assigment">Robot Project.Assigment</stat>
+<stat pass="0" fail="1" id="s1-s1-s1" name="Signup">Robot Project.Assigment.Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
