@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.8.5 on win32)" generated="20200930 20:15:28.020" rpa="true">
+<suite id="s1" name="FirstRobotProject" source="C:\Softtek\Confidential\Textstyle\Textstyle_workspace\FirstRobotProject">
+<suite id="s1-s1" name="Test" source="C:\Softtek\Confidential\Textstyle\Textstyle_workspace\FirstRobotProject\Test">
+<suite id="s1-s1-s1" name="FirstSuite" source="C:\Softtek\Confidential\Textstyle\Textstyle_workspace\FirstRobotProject\Test\FirstSuite.robot">
+<test id="s1-s1-s1-t1" name="MyFirstTest">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Hello world..</arg>
+</arguments>
+<msg timestamp="20200930 20:15:28.364" level="INFO">Hello world..</msg>
+<status status="PASS" starttime="20200930 20:15:28.363" endtime="20200930 20:15:28.365"></status>
+</kw>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="PASS" starttime="20200930 20:15:28.362" endtime="20200930 20:15:28.365" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="FirstSeleniumTest">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20200930 20:15:28.368" level="INFO">Opening browser 'chrome' to base url 'https://www.justfab.com/?hideCaptchaAutomation=1'.</msg>
+<status status="PASS" starttime="20200930 20:15:28.367" endtime="20200930 20:15:37.801"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://a[@class=' login_modal_trigger']</arg>
+</arguments>
+<msg timestamp="20200930 20:15:37.802" level="INFO">Clicking link 'xpath://a[@class=' login_modal_trigger']'.</msg>
+<status status="PASS" starttime="20200930 20:15:37.801" endtime="20200930 20:15:39.790"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20200930 20:15:39.791" endtime="20200930 20:15:39.796"></status>
+</kw>
+<kw name="Login">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=reference_data</arg>
+<arg>mktest1711@test.com</arg>
+<arg>@{CREDENTIALS}[0]</arg>
+</arguments>
+<msg timestamp="20200930 20:15:39.798" level="WARN">Accessing variable items using '@{CREDENTIALS}[0]' syntax is deprecated. Use '${CREDENTIALS}[0]' instead.</msg>
+<msg timestamp="20200930 20:15:39.799" level="INFO">Typing text 'mktest1711@test.com' into text field 'id=reference_data'.</msg>
+<status status="PASS" starttime="20200930 20:15:39.797" endtime="20200930 20:15:40.212"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=verification_data</arg>
+<arg>Tester123</arg>
+<arg>@{CREDENTIALS}[1]</arg>
+</arguments>
+<msg timestamp="20200930 20:15:40.213" level="WARN">Accessing variable items using '@{CREDENTIALS}[1]' syntax is deprecated. Use '${CREDENTIALS}[1]' instead.</msg>
+<msg timestamp="20200930 20:15:40.214" level="INFO">Typing password into text field 'name=verification_data'.</msg>
+<msg timestamp="20200930 20:15:40.290" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20200930 20:15:40.401" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20200930 20:15:40.212" endtime="20200930 20:15:40.402"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200930 20:15:50.404" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200930 20:15:40.402" endtime="20200930 20:15:50.404"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://div[@data-autotag="loginmodal-btn"]</arg>
+</arguments>
+<msg timestamp="20200930 20:15:50.406" level="INFO">Clicking element 'xpath://div[@data-autotag="loginmodal-btn"]'.</msg>
+<status status="PASS" starttime="20200930 20:15:50.405" endtime="20200930 20:15:50.527"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200930 20:16:00.530" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20200930 20:15:50.528" endtime="20200930 20:16:00.531"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath://[@data-ga-label="myaccount"]</arg>
+</arguments>
+<msg timestamp="20200930 20:16:00.534" level="INFO">Clicking element 'xpath://[@data-ga-label="myaccount"]'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20200930 20:16:02.740" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20200930 20:16:02.178" endtime="20200930 20:16:02.741"></status>
+</kw>
+<msg timestamp="20200930 20:16:02.746" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //[@data-ga-label="myaccount"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//[@data-ga-label="myaccount"]' is not a valid XPath expression.
+  (Session info: chrome=85.0.4183.121)
+</msg>
+<status status="FAIL" starttime="20200930 20:16:00.532" endtime="20200930 20:16:02.747"></status>
+</kw>
+<status status="FAIL" starttime="20200930 20:15:39.796" endtime="20200930 20:16:02.748"></status>
+</kw>
+<tags>
+<tag>Sanity</tag>
+</tags>
+<status status="FAIL" starttime="20200930 20:15:28.366" endtime="20200930 20:16:02.748" critical="yes">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //[@data-ga-label="myaccount"] because of the following error:
+SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//[@data-ga-label="myaccount"]' is not a valid XPath expression.
+  (Session info: chrome=85.0.4183.121)
+</status>
+</test>
+<status status="FAIL" starttime="20200930 20:15:28.095" endtime="20200930 20:16:02.750"></status>
+</suite>
+<status status="FAIL" starttime="20200930 20:15:28.091" endtime="20200930 20:16:02.754"></status>
+</suite>
+<status status="FAIL" starttime="20200930 20:15:28.057" endtime="20200930 20:16:02.759"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tasks</stat>
+<stat pass="1" fail="1">All Tasks</stat>
+</total>
+<tag>
+<stat pass="1" fail="1">Sanity</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="FirstRobotProject">FirstRobotProject</stat>
+<stat pass="1" fail="1" id="s1-s1" name="Test">FirstRobotProject.Test</stat>
+<stat pass="1" fail="1" id="s1-s1-s1" name="FirstSuite">FirstRobotProject.Test.FirstSuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200930 20:15:39.798" level="WARN">Accessing variable items using '@{CREDENTIALS}[0]' syntax is deprecated. Use '${CREDENTIALS}[0]' instead.</msg>
+<msg timestamp="20200930 20:15:40.213" level="WARN">Accessing variable items using '@{CREDENTIALS}[1]' syntax is deprecated. Use '${CREDENTIALS}[1]' instead.</msg>
+</errors>
+</robot>
