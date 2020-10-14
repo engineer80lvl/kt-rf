@@ -9,8 +9,9 @@ Test Teardown  Close the browser
 
 ${Sign up}   xpath://*[@data-autotag="sign_up"]
 ${Quiz gender}   xpath://*[@id="quiz-gender-options-container"]
-${Select Gender}   xpath://*[@data-autotag="quiz_girl_profile"]
-${QuizBtn1}          quiz-page-btn
+${Select Gender}   jquery=.quiz-gender-option-image
+${QuizBtn1}           jquery=#quiz-page-btn
+${Quizjquery}           jquery=#quiz-page-btn
 ${ChildName}        xpath://*[@data-autotag="quiz_child_name"]
 ${ClotheSize}   xpath://*[@data-autotag="quiz_child_size_opt"]
 ${ClotSize2}        xpath://*[@id="quiz-form-page-container"]/div[2]/select/option[2]
@@ -33,13 +34,13 @@ ${emailres}        lucy@fkqa.com
  ***Test Case ***
 Take Quiz  
    Click Element     ${Sign up} 
-   Wait Until Element is visible  ${Quiz gender}  30s
+   Wait Until Element is visible  ${Quiz gender}  60s
    Click Element   ${Select Gender}
    Wait Until Element is visible  ${QuizBtn1} 
    Click button   ${QuizBtn1} 
-  Wait Until Element is visible  ${QuizBtn1}  30s
-   Click button   ${QuizBtn1} 
-   Wait Until Element is visible  ${ChildName}  30s
+  Wait Until Element is visible  ${Quizjquery}  30s
+   Click button   ${Quizjquery}  
+   Wait Until Element is visible  ${ChildName}  60s
    Input Text     ${ChildName}  EMMA
    Wait Until Element is visible  ${ClotheSize} 
    Click Element         ${ClotheSize} 

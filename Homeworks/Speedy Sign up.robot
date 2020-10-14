@@ -6,7 +6,7 @@ Test setup  Open Fabkids browser
 Test Teardown  Close the browser
 
 *** Variables ***
-${URL}        https://www.fabkids.com/products/LIGHT-UP-UNICORN-SNEAKER-SK2044847-7267?psrc=shop_item_shoes
+${URL}        https://www.fabkids.com/products/STAR-KNEE-LEGGING-BM2043427-0001?psrc=shop_item_leggings
 ${browser}    chrome
 ${product_size}        jquery=#sizes li:contains(M)
 ${addtocart_button}    jquery=.addToCartSubmitButton
