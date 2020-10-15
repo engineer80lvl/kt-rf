@@ -16,7 +16,5 @@ ${totalgridtext}
 ${profilepage}=	https://www.justfab.dk/account#index.cfm?action=accountinfo.edit_member&tab=profile
 ${homepage}=  https://www.justfab.dk/home
 ${shoespage}=  https://www.justfab.dk/dame/sko
-${shoespagewako}=  https://www.justfab.dk/dame/skotest
-
 
 ${welcometext}=  Welcome to JustFab, Orvin
