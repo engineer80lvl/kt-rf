@@ -1,7 +1,7 @@
 *** Settings ***
 Library  SeleniumLibrary
 Library  String
-Resource  Setup_Teardown.robot
+Resource  Setup_Teardown_Desktop.robot
 Test setup  Open Fabkids browser 
 Test Teardown  Close the browser
 
